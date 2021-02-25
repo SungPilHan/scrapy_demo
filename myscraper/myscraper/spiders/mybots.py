@@ -6,7 +6,7 @@ from myscraper.items import MyscraperItem
 class MybotsSpider(scrapy.Spider):
     name = 'mybots'
     allowed_domains = ['finance.daum.net/quotes/A005930#home']
-    start_urls = ['https://finance.daum.net/quotes/A005930#home/']
+    start_urls = ['https://finance.daum.net/quotes/A005930#home']
 
     def parse(self, response):
         read_time = time.strftime('%c', time.localtime(time.time()))

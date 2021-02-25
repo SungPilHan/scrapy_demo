@@ -23,21 +23,19 @@ class MyscraperPipeline:
         # VALUES(\'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\')
         # """.format(item.get('title'), item.get('grade'), item.get('review'), item.get('user'), item.get('date')))
 
-        sql = "INSERT INTO stock_view(id, ticker_code, volume, price, max_price, min_price, read_time) VALUES(null, %s, %s, %s, %s, %s, %s)"
+        sql = "INSERT INTO stock_view(ticker_code, volume, price, max_price, min_price, read_time) VALUES(%s, %s, %s, %s, %s, %s)"
         self.cur.execute(sql, (item.get('ticker_code'), item.get('volume'), item.get('price'), item.get('max_price'), item.get('min_price'), item.get('read_time')))
 
         self.conn.commit()
 
     def setupDBConnect(self):
-        # self.conn = pymysql.connect(host='127.0.0.1', user='root', password='1234', db='mydb', charset='utf8')
-        self.conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='mydb', charset='utf8')
+        self.conn = pymysql.connect(host='127.0.0.1', user='root', password='1234', db='mydb', charset='utf8')
+        # self.conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='mydb', charset='utf8')
         self.cur = self.conn.cursor()
 
         print("DB Connected")
 
     def createTable(self):
-        self.cur.execute("DROP TABLE IF EXISTS stock_view")
-
         self.cur.execute("""
         CREATE TABLE IF NOT EXISTS stock_view(
             id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -46,7 +44,7 @@ class MyscraperPipeline:
             price VARCHAR(20),
             max_price VARCHAR(20),
             min_price VARCHAR(20),
-            read_time VARCHAR(20)
+            read_time VARCHAR(50)
             )
         """)
 
