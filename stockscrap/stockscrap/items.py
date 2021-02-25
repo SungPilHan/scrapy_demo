@@ -6,7 +6,9 @@
 import scrapy
 
 
-class MyscraperItem(scrapy.Item):
+class StockscrapItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
     ticker_code = scrapy.Field()
     volume = scrapy.Field()
     price = scrapy.Field()

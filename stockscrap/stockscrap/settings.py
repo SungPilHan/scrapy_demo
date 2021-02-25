@@ -1,4 +1,4 @@
-# Scrapy settings for myscraper project
+# Scrapy settings for stockscrap project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'myscraper'
+BOT_NAME = 'stockscrap'
 
-SPIDER_MODULES = ['myscraper.spiders']
-NEWSPIDER_MODULE = 'myscraper.spiders'
+SPIDER_MODULES = ['stockscrap.spiders']
+NEWSPIDER_MODULE = 'stockscrap.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'myscraper (+http://www.yourdomain.com)'
+#USER_AGENT = 'stockscrap (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'myscraper.middlewares.MyscraperSpiderMiddleware': 543,
+#    'stockscrap.middlewares.StockscrapSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'myscraper.middlewares.MyscraperDownloaderMiddleware': 543,
+#    'stockscrap.middlewares.StockscrapDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'myscraper.pipelines.MyscraperPipeline': 300,
+   'stockscrap.pipelines.StockscrapPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -86,6 +86,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
 
 FEED_FORMAT = "csv"
 FEED_URI = "stock_view.csv"

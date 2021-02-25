@@ -8,7 +8,7 @@
 from itemadapter import ItemAdapter
 import pymysql
 
-class MyscraperPipeline:
+class StockscrapPipeline:
     def __init__(self):
         self.setupDBConnect()
         self.createTable()
@@ -47,11 +47,3 @@ class MyscraperPipeline:
             read_time VARCHAR(50)
             )
         """)
-
-# ticker_code = scrapy.Field()
-# volume = scrapy.Field()
-# price = scrapy.Field()
-# max_price = scrapy.Field()
-# min_price = scrapy.Field()
-# read_time = scrapy.Field()
-
