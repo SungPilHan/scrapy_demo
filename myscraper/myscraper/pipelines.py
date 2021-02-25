@@ -36,8 +36,6 @@ class MyscraperPipeline:
         print("DB Connected")
 
     def createTable(self):
-        self.cur.execute("DROP TABLE IF EXISTS stock_view")
-
         self.cur.execute("""
         CREATE TABLE IF NOT EXISTS stock_view(
             id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
