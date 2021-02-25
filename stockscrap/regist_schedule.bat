@@ -1,0 +1,1 @@
+call schtasks /create /tn "scrapy_demo" /tr %cd%\runs.bat /sc minute /mo 10
