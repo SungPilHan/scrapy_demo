@@ -5,8 +5,8 @@ from myscraper.items import MyscraperItem
 
 class MybotsSpider(scrapy.Spider):
     name = 'mybots'
-    allowed_domains = ['finance.daum.net/quotes/A005930#home']
-    start_urls = ['https://finance.daum.net/quotes/A005930#home']
+    allowed_domains = ['finance.daum.net/quotes/A005930']
+    start_urls = ['https://finance.daum.net/quotes/A005930']
 
     def parse(self, response):
         read_time = time.strftime('%c', time.localtime(time.time()))
@@ -17,10 +17,10 @@ class MybotsSpider(scrapy.Spider):
         ticker_code = response.xpath('//*[@id="favorite"]/em/text()').extract()
 
         item = MyscraperItem()
-        item['read_time'] = read_time
-        item['volume'] = volume
-        item['price'] = price
-        item['max_price'] = max_price
-        item['min_price'] = min_price
-        item['ticker_code'] = ticker_code
+        item['read_time'] = read_time[0]
+        item['volume'] = volume[0]
+        item['price'] = price[0]
+        item['max_price'] = max_price[0]
+        item['min_price'] = min_price[0]
+        item['ticker_code'] = ticker_code[0]
         return item
