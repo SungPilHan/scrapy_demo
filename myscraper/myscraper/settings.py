@@ -88,5 +88,5 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 FEED_FORMAT = "csv"
-FEED_URI = "mv_point.csv"
+FEED_URI = "stock_view.csv"
 FEED_EXPORT_ENCODING = "utf-8"
