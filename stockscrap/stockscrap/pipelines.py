@@ -29,7 +29,7 @@ class StockscrapPipeline:
         self.conn.commit()
 
     def setupDBConnect(self):
-        self.conn = pymysql.connect(host='127.0.0.1', user='root', password='1234', db='mydb', charset='utf8')
+        self.conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='mydb', charset='utf8')
         # self.conn = pymysql.connect(host='127.0.0.1', user='root', password='', db='mydb', charset='utf8')
         self.cur = self.conn.cursor()
 
