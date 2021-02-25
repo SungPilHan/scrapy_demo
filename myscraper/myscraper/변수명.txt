@@ -1,5 +1,5 @@
 데이터 읽어온 시간 : read_time
-현재 거래량 : volumn
+현재 거래량 : volume
 현재 가격 : price
 최고가 : max_price
 최저가 : min_price
