@@ -10,3 +10,5 @@ max_price,min_price,price,read_time,ticker_code,volume
 "85,400","83,000","85,300",Thu Feb 25 15:40:40 2021,005930,"33,738,239"
 max_price,min_price,price,read_time,ticker_code,volume
 "85,400","83,000","85,300",Thu Feb 25 15:41:10 2021,005930,"33,738,239"
+max_price,min_price,price,read_time,ticker_code,volume
+"85,400","83,000","85,300",Thu Feb 25 15:55:53 2021,005930,"33,761,620"
